@@ -12,8 +12,8 @@ const routes = [
         component: () => import('./components/WeatherBlock.vue'),
     },
     {
-        path: '/favorites_tab',
-        name: 'favorites tab',
+        path: '/favorites',
+        name: 'favorites',
         component: () => import('./components/FavoritesBlock.vue'),
     },
 ];
