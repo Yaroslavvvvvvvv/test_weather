@@ -1,21 +1,25 @@
 <script setup>
+
+function reloadPage() {
+  window.location.reload();
+}
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/images/logo.svg" class="logo" alt="Vite logo"/>
-    </a>
-  </div>
   <header class="header">
+    <div>
+      <a href="#" @click.prevent="reloadPage">
+        <img src="/images/logo.svg" class="logo" alt="Vite logo"/>
+      </a>
+    </div>
     <nav class="navbar">
       <div class="navbar-container">
         <ul class="navbar-menu">
           <li class="navbar-item">
-            <router-link to="/" class="navbar-link" aria-current="page">Главная</router-link>
+            <router-link to="/" class="navbar-link">Головна</router-link>
           </li>
           <li class="navbar-item">
-            <router-link to="/favorites" class="navbar-link">Избранное</router-link>
+            <router-link to="/favorites" class="navbar-link">Вибране</router-link>
           </li>
         </ul>
       </div>
@@ -38,6 +42,7 @@
   background-color: #333;
   color: #fff;
   padding: 1em;
+  border-radius: 0.5em;
 }
 
 .navbar {
@@ -77,5 +82,6 @@
 
 .navbar-link[aria-current="page"] {
   font-weight: bold;
+  color: #535bf2;
 }
 </style>
