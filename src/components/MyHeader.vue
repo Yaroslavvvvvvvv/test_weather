@@ -17,12 +17,12 @@ const switchLanguage = (event) => {
 <template>
   <header class="header">
     <div>
-      <div>
+      <div class="lang">
         <select id="language-select"
                 class=""
                 @change="switchLanguage">
-          <option value="en" :selected="locale === 'en'">English</option>
           <option value="ua" :selected="locale === 'ua'">Україньска</option>
+          <option value="en" :selected="locale === 'en'">English</option>
         </select>
       </div>
       <a href="#" @click.prevent="reloadPage">
@@ -100,5 +100,29 @@ const switchLanguage = (event) => {
 .navbar-link[aria-current="page"] {
   font-weight: bold;
   color: #535bf2;
+}
+
+.lang {
+  text-align: start;
+}
+
+#language-select {
+  color: #fff;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  transition: background-color 300ms, border-color 300ms;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  outline: none;
+}
+
+#language-select:focus {
+  outline: none;
+  border-color: white;
+  box-shadow: none;
 }
 </style>
